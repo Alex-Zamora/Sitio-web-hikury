@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}{{service.title}}{% endblock %}
+
+{% block content %}
+<section id="wrapper">
+	<article id="wrapper-detail-post">
+			<div id="img-back">
+				<img src="{{MEDIA_URL}}{{service.image}}" alt="">					
+			</div>
+			<div id="encabezado-articulo">
+				<div id="arrows-serive">
+					<div id="left-service">
+						<a href="#"><img src="{% static 'image/arrow-left1.png' %}" alt=""></a>
+						<h3>Atrás</h3>
+					</div>
+					<div id="right-service">
+						<a href="#"><img src="{% static 'image/arrow-right1.png' %}" alt=""></a>
+						<h3>Siguiente</h3>
+					</div>
+				</div>
+				<div id="title-icon" >
+					<h1>{{service.title}}</h1>
+					<div id="migajas">
+						<a href="index.html"><h3>Inicio</a> / <a href="index.html#servicios">Servicios</a> / <span>{{service.title}}</h3></span>
+					</div>
+				</div>
+			</div>
+			<div id="content-post">
+
+				<p>{{service.description}}.</p><br>
+
+			</div>			
+	</article>
+</section>
+{% endblock %}

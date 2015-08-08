@@ -1,0 +1,18 @@
+	
+
+{% for p in projects %}
+<div class="slide" id="slide{{p.num_slide}}">
+	<div id="proyecto">
+		<div id="content-proyecto">
+			<div id="imagen">
+				<img id="diseno-image" src="{{ MEDIA_URL }}{{p.image}}" alt="{{p.title}}">
+			</div>
+			<div id="description">
+				<h1>{{ p.title }}</h1>
+				<p>{{ p.description }}</p>
+				<a target="_blank" href="{{ p.url }}">Visitar</a>
+			</div>
+		</div>			
+	</div>			
+</div>
+{% endfor %}

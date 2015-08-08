@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block title %}Blog{% endblock %}
+
+{% block content %}
+<section id="wrapper">
+	<div id="wrapper-blog">
+
+		{% for p in posts %}
+		<a href="{{p.slug}}/">
+		<article id="post">
+			<div id="post-left">		
+				<img src="{{MEDIA_URL}}{{p.imagePrev}}" alt="{{p.title}}">
+			</div>
+			<div id="post-right">
+				<div id="title">					
+					<h1>{{p.title}}</h1>		
+				</div>
+				<div id="description">
+					<p>{{p.content|truncatechars:120|safe}}</p>
+				</div>
+				<div id="data">
+					<h3>{{p.date}} /</h3>
+					{% for t in p.category.all %}
+					<h2>{{t.name}}</h2>
+					{% endfor %}
+				</div>
+			</div><!-- fin post-right -->
+		</article><!--  fin post -->
+		</a>
+		{% endfor %}		
+	</div><!-- fin wrapper blog -->
+</section><!-- fin wrapper -->
+{% endblock %}

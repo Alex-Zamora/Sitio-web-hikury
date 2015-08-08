@@ -1,0 +1,100 @@
+/* MENU
+* --------------------------------------- */
+.slideout-menu {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 190px;
+	height: 100%;
+	float: left;
+	background-color: #123f75;
+	text-align: left;
+	z-index: 100;	 	
+}
+#head-menu{display: inline-block; width: 100%; height: 90px; margin-top:60px; margin-bottom: 10px;}
+#logo-menu{ width: 100%;  text-align: center; display: inline-block;}
+#logo-menu img{ width: 62px; text-align: center; }
+.slideout-menu #icon-closet{ width: 100%; height: 40px;  cursor: pointer;  
+	padding: 17px 0 20px 43px; float: none; display: none; }
+.slideout-menu #icon-closet i{ font-size: 5em;  }
+.slideout-menu #icon-closet img{ width: 15px; float: left; margin-left: 16px; margin-top: 3px;}
+.slideout-menu #icon-closet h2{ font-family: "Lato"; font-size: 16px; font-weight: 100px; 
+color:#fff; text-transform: uppercase; float: left; margin-left: 15px;}
+
+.slideout-menu .slideout-menu-toggle {
+	position: relative;
+	margin-top: 0;
+	display: inline-block;
+	padding: 15px;
+	font-family: Arial, sans-serif;
+	color: #fff;
+	text-decoration: none;
+	
+}
+#icon-open{ cursor: pointer; }
+.slideout-menu .slideout-menu-toggle:hover { color: #fff; }
+.slideout-menu ul {
+	list-style: none;
+	font-weight: 300;
+	position: relative;
+	margin-top: 4%;
+	border-top: 1px solid #25538b;
+		
+}
+.slideout-menu ul li { 
+	border-bottom: 1px solid #25538b;
+	-webkit-transition: background-color 0.7s ease-out;
+    -moz-transition: background-color 0.7s ease-out;
+    -o-transition: background-color 0.7s ease-out;
+    transition: background-color 0.7s ease-out;  
+}
+.slideout-menu ul li:hover{ background-color: #aec2da; }
+.slideout-menu ul li a:hover{ color:#000; }
+.slideout-menu ul li a {
+	position: relative;
+	display: block;
+	padding: 14px 30px 14px 30px;
+	color: #fff;
+	font-size: 1.2em;
+	text-decoration: none;
+	text-align: center;
+	font-family:"Lato"; 
+	font-weight: 300; 	
+	font-size:15px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+
+}
+.slideout-menu ul li a:hover { color: #fff; }
+.header { display: none; }
+.header .slideout-menu-toggle {
+	font-size: 2em;
+	color: #fff;
+	text-decoration: none;
+	position: fixed;
+	z-index: 5;
+	top: 0;
+	left: 0;
+	background-color: #123f75;
+	width: 50px;
+	height: 50px;
+	text-align: center;
+	padding-top: 6px;
+	}
+.header .slideout-menu-toggle:hover { color: #fff; }
+#tel-menu{ display: inline-block; margin-top: 50px;}
+#tel-menu h2{
+	position: relative;
+	color: #fff;
+	font-family:"Open Sans"; font-weight: 300; 	font-size:16px; color:#fff;
+	float: left;
+	margin-right: 10px;
+}
+
+#redes{ margin-top: 50px; text-align: center; }
+#redes img{ margin: 4px; width: 30px; }
+
+#contacto-menu{text-align: center; margin-top: 40px;}
+#contacto-menu h3{color:#fff; font-family:"Lato"; font-weight: 300; 
+	letter-spacing: 1.5px; font-size:13px; margin-bottom: 4px;}
+

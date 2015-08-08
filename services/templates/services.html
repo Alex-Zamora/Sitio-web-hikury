@@ -1,0 +1,16 @@
+
+	{% for s in services %}
+	<a href="servicios/{{s.slug}}/">
+	<div id="servicio">
+		<div id="content-servicio">		
+			<div id="imagen">
+				<img id="diseno-image" src="{{MEDIA_URL}}{{s.icon}}" alt="{{ s.title }}">
+			</div>
+			<div id="description">
+				<h1>{{ s.title }}</h1>
+				<p>{{ s.description|truncatechars:90|safe }}</p>
+			</div>
+		</div>
+	</div>
+	</a>
+	{% endfor %}

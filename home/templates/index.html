@@ -1,0 +1,116 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load services_tags %}
+{% load projects_tags %}
+{% block title %}  {% endblock %}
+
+{% block content %}
+<div id="fullpage" class="animatedParent" data-sequence="600">	
+	<div class="section" id="section0" >
+		<div id="frase">
+			<h3 class="animated fadeInDown" data-id="1">{{home.title_index}} <span></span></h3>
+			<ul class="animated fadeInDown" data-id="2">
+				<li><h2>Creatividad &nbsp</h2></li>
+				<li><h2> Innovación &nbsp</h2></li>
+				<li><h2> Diseño</h2></li>
+			</ul>
+		</div>
+		<div id="icon-arrow" class="animated fadeInUp" data-id="3">
+			<img class="moveSectionDown" src="{% static 'image/icon-arrow1.png' %}" alt="">
+		</div>		
+	</div><!-- /section0 -->
+	
+	<div class="section" id="section1">
+
+		<div id="icon-arrow-top" class="moveSectionUp">
+			<img src="image/icon-arrow2.png" alt="">
+		</div>
+
+		{% show_services %}
+
+		<div id="icon-arrow-bottom" class="moveSectionDown">
+			<img src="image/icon-arrow1.png" alt="">
+		</div>
+	</div> <!-- /section1 -->
+
+	<div class="section" id="section2">
+		<div id="icon-arrow-top" class="moveSectionUp">
+			<img src="image/icon-arrow2.png" alt="">
+		</div>
+	    
+		{% show_projects %}
+								
+	</div><!-- /section2 -->
+</div><!-- fin fullpage -->
+<!-- js -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script type="text/javascript" src="{% static 'js/jquery.fullPage.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/css3-animate-it.js' %}"></script>
+<script type="text/javascript">
+$(document).ready(function (){
+    $('.slideout-menu-toggle').on('click', function(event){
+    	event.preventDefault();
+    	// create menu variables
+    	var slideoutMenu = $('.slideout-menu');
+    	var slideoutMenuWidth = $('.slideout-menu').width();
+    	$("#icon-open").hide(200);    	
+    	
+    	// toggle open class
+    	slideoutMenu.toggleClass("open");
+    	
+    	// slide menu
+    	if (slideoutMenu.hasClass("open")) {
+	    	slideoutMenu.animate({
+		    	left: "0px"
+	    	});	
+    	} else {
+	    	slideoutMenu.animate({ left: -slideoutMenuWidth }, 220);	
+    	}
+    });
+    $('#icon-closet').on('click', function(event){
+		$("#icon-open").show(200);
+    });
+
+  });
+</script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		 function initialization(){
+			$('#fullpage').fullpage({
+				verticalCentered: false,
+				navigation: true,
+				navigationPosition: 'right',
+				anchors: ['inicio', 'servicios', 'proyectos'],
+				navigationTooltips: ['Inicio', 'Servicios', 'Proyecto'],
+				scrollBar: false,
+				loopHorizontal: true,
+				continuousVertical: false,
+
+			});
+		}	
+
+		//fullPage.js initialization
+		initialization();
+		$('.moveSectionUp').click(function(e){
+			e.preventDefault();
+			$.fn.fullpage.moveSectionUp();
+		});
+		$('.moveSectionDown').click(function(e){
+			e.preventDefault();
+			$.fn.fullpage.moveSectionDown();
+		});
+
+		$('#arrow-left').click(function(e){
+			e.preventDefault();
+			$.fn.fullpage.moveSlideLeft();
+		});
+
+		$('#arrow-right').click(function(e){
+			e.preventDefault();
+			$.fn.fullpage.moveSlideRight();
+		});		
+
+	});	
+
+</script>
+{% endblock %}

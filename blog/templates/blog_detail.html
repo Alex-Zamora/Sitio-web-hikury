@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Blog{% endblock %}
+
+
+{% block content %}
+<section id="wrapper">
+	<article id="wrapper-detail-post" class="animatedParent" data-sequence="500">
+			<div id="img-back">
+				<img src="{{MEDIA_URL}}{{post.imagePost}}" alt="{{post.title}}">
+			</div>
+			<div id="encabezado-articulo">
+				<div id="arrows-serive">
+					<div id="left-service">
+						<a href="#"><img src="{% static 'image/arrow-left1.png' %}" alt=""></a>
+						<h3>Atrás</h3>
+					</div>
+					<div id="right-service">
+						<a href="#"><img src="{% static 'image/arrow-right1.png' %}" alt=""></a>
+						<h3>Siguiente</h3>
+					</div>
+				</div>
+				<div id="title-icon" >
+					<h1 class='animated fadeInDownShort' data-id="2">{{post.title}}</h1>
+					<div id="data">
+						<h3>{{post.date}} /</h3>
+						{% for c in post.category.all %}
+						<h2>{{c.name}}</h2>
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+			<div id="content-post" class='animated fadeInDownShort' data-id="3">
+				<p>{{post.content}}</p>
+			</div>			
+	</article>
+</section>
+{% endblock %}

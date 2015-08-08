@@ -1,0 +1,230 @@
+@media screen and (max-width: 1200px){
+	/*==== SERVICIOS ====*/
+	#servicio #imagen{ float: none; text-align: center; }
+	#servicio #content-servicio { padding: 7%; margin-top: 12px;}
+	#servicio #description{ float: none; text-align: center; display: inline-block; width: 70%; }
+	#servicio #description h1{ text-align: center; font-size: 28px; }
+	#servicio #description p{ text-align: center; }
+
+	/*==== PROYECTOS ====*/
+	#proyecto #content-proyecto{ padding: 7% 8% 8% 8%; text-align: center;}
+	#proyecto #imagen{ float: none; width: 40%; margin-left: 0; display: inline-block; }
+	#proyecto #description{ float: none; display: inline-block; width: 70%; }
+	#proyecto #description h1{ text-align: center; width: 100%; }
+	#proyecto #description p{ text-align: center; }
+	#proyecto #description a{ float: none; display: inline-block;}
+	
+	/*POST*/
+	#post{ padding: 5% 7% 4% 7%; }
+	#post #post-left img{ width: 63%; float: none}
+	#post #title h1{  margin-top: 5px; text-align: center; font-size: 24px;}
+	#post #description p{ font-size: 16px; padding: 6px 0 0 0; text-align: center;}
+	#post #data{ float: none; margin-top: 15px; margin-bottom: 4px;}
+	#post #data h3{ display: none;    }
+	#post #data h2{ font-size: 13px; padding: 1px 6px 1px 6px; margin-left: 5px;}
+	#post:nth-child(1) #post-left img{ width: 63%; float: none }
+	#post:nth-child(1) #data h3{ display: none; }
+	#post:nth-child(1) #description p{ font-size: 16px; padding: 6px 0 0 0; text-align: center; }
+	#post:nth-child(1) #data{ margin-top: 15px; width: 100%; display: block; margin-bottom: 4px;}
+	/*FIN POST*/
+
+}
+
+/* 960px */
+@media screen and (max-width: 970px){
+	#section1{ margin-right: -30px; }
+	#section0 #frase ul{ }
+	#section0 #frase ul li{ float: none; margin-bottom: 5px; }
+	/*POST*/
+	#post{ padding: 5% 7% 4% 7%; }
+	#post #post-left img{ width: 63%; float: none}
+	#post #title h1{  margin-top: 5px; text-align: center; font-size: 24px;}
+	#post #description p{ font-size: 16px; padding: 6px 0 0 0; text-align: center;}
+	#post #data{ float: none; margin-top: 15px; margin-bottom: 4px;}
+	#post #data h3{ display: none;    }
+	#post #data h2{ font-size: 13px; padding: 1px 6px 1px 6px; margin-left: 5px;}
+	#post:nth-child(1) #post-left img{ width: 63%; float: none }
+	#post:nth-child(1) #data h3{ display: none; }
+	#post:nth-child(1) #description p{ font-size: 16px; padding: 6px 0 0 0; text-align: center; }
+	#post:nth-child(1) #data{ margin-top: 15px; width: 100%; display: block; margin-bottom: 4px;}
+	/*FIN POST*/
+}
+/* Móviles en horizontal o tablets en vertical */
+@media screen and (max-width: 769px){
+	/*==== MENU ====*/
+	.header { display: block; }
+	.slideout-menu{ left: -190px; }
+	.slideout-menu #icon-closet{ display: block; }
+	/*==== FIN MENU ====*/
+
+	#wrapper{ padding-left: 0; }
+
+	/* SECTIONS */
+	#section0{ width: 100%; height: 100%; float: none;}
+	#section1{ width: 100%; height: 100%; float: none;}
+	#section2{ width: 100%; height: 100%; float: none;}
+	/* FIN SECTIONS */
+
+
+	/* SECTION-0 */
+	#section0 #frase{ width: 80%; display: inline-block;  }
+	#section0 #frase h3{  font-size: 85px; }
+	#section0 #frase ul { width: 100%; margin-top: 20px; }
+	#section0 #frase ul li{ float: none; margin-bottom: 0; margin-bottom: 8px; }
+	#section0 #frase ul li h2{ font-size: 16px }
+	/* FIN SECTION-0 */
+
+	/* SECTION1 */
+	#servicio #imagen{ margin-bottom: 15px; }
+	#servicio #imagen img{ width: 85px; }
+	#content-servicio #description{ width: 90%;}
+	#content-servicio #description h1{ font-size: 22px; }
+	#content-servicio #description p{ font-size: 18px; }
+	/* FIN SECTION1*/
+
+	/* SECTION2 */
+	#proyecto #content-proyecto{ padding: 18% 8% 8% 8%; text-align: center;}
+	#proyecto #description{ margin-top: 15px; width: 70%; }
+	#proyecto #description h1{ font-size: 26px; }
+	.fp-controlArrow.fp-prev{ left: 52px; }
+	.fp-controlArrow.fp-next{ right: 52px; }
+	/* FIN SECTION2 */
+
+	/*DETALLE POST*/
+	#wrapper-detail-post #img-back img{height: 320px;}
+	#wrapper-detail-post #encabezado-articulo{height: 320px;}
+	#wrapper-detail-post #encabezado-articulo h1{font-size: 40px;}
+	#wrapper-detail-post #content-post p {font-size: 18px; }
+	#wrapper-detail-post #data h3{font-size: 15px;}
+	#wrapper-detail-post #data h2{font-size: 15px;}
+	/*FIN DETALLE POST*/
+
+	/*QUIENES SOMOS*/
+	#left-quienes{float: none; height: 30%; width: 100%; padding: 4% 0 2% 0;}
+	#left-quienes img{width: 70px;}
+	#right-quienes{ float: none; height: 79%; width: 100%; text-align: center; background-color: #fff;}
+	#arriba-quienes{height: 65%; }
+	#abajo-quienes{height: 36%; }
+	#abajo-quienes h1 {font-size: 33px;}
+	#abajo-quienes h2{font-size: 18px;}
+	/*FIN QUIENES SOMOS*/
+	
+	/*CONTACTO*/
+	#left-form{ width: 100%; float: none;}
+	#right-form{ width: 100%; float: none; }
+	#wrapper-contacto{ padding-top: 0; }
+	#wrapper-contacto #alto{ padding: 11%; }
+	#wrapper-contacto #alto input{ margin-bottom: 24px; padding: 15px 11px 11px 11px;  }
+	#wrapper-contacto #alto textarea{ min-height: 180px; margin-bottom: 25px; }
+	#wrapper-contacto #bajo{display: none;}
+	/*FIN CONTACTO*/
+
+}
+
+@media screen and (max-width: 720px){
+	/*DETALLE POST*/
+	#wrapper-detail-post #encabezado-articulo h1{font-size: 25px;}
+	#wrapper-detail-post #encabezado-articulo #title-icon{ width: 70%;}
+	#left-service{ left: 20px; height: 40px; width: 80px; position: absolute; cursor: pointer; z-index: 4;}
+	#right-service{ right: 20px; height: 40px; width: 80px; position: absolute; cursor: pointer; z-index: 4;}
+	/*DETALLE POST*/
+}
+
+@media screen and (max-width: 480px){
+	#fp-nav ul, .fp-slidesNav ul { display: none; }
+	#section0 #icon-arrow img{ margin-top: 50px; width: 45px; height: 45px; }
+	/* SECTION-0 */
+	#section0 #frase{ width: 80%; display: inline-block; padding-top: 131px; }
+	#section0 #frase h3{  font-size: 47px; }
+	#section0 #frase ul li h2{ font-size: 18px; font-weight: 300;}
+	#section0 #icon-arrow img { margin-top: 39px; }
+	/* FIN SECTION-0 */
+	
+	/* SECTION-1 */
+	#section1 #icon-arrow-top{ display: inline-block; cursor: pointer; height: 81px; width: 100%; 
+		padding-top: 16px; touch-action: manipulation; }
+	#section1 #icon-arrow-bottom{ display: inline-block; cursor: pointer; height: 100px; width: 100%; 
+		padding-top: 32px; touch-action: manipulation;}
+	#section1 #icon-arrow-top img{ height: 45px; width: 45px; }
+	#section1 #icon-arrow-bottom img{ height: 45px; width: 45px; }
+	#servicio{ height: 31%; }
+	#servicio #content-servicio { padding: 3% 10% 10% 10%; margin-top: 0; }
+	#content-servicio #description p{display: none;}
+	#content-servicio #description h1{ font-size: 17px; font-weight: 400;}
+	#servicio #imagen { margin-bottom: 5px; }
+	#servicio #imagen img{ width: 82px;}
+	/* FIN SECTION-1 */
+
+	/* SECTION-2 */
+	.fp-controlArrow.fp-prev{ left: 3px; }
+	.fp-controlArrow.fp-next{ right: 5px; }
+	#proyecto #content-proyecto{padding: 0% 0% 8% 0%;}
+	#proyecto #description h1{ font-size: 21px; }
+	#proyecto #description p{ font-size: 16px; }
+	#proyecto #description a{ width: 82px; font-size: 15px;  margin-top: 15px;}
+	#section2 #icon-arrow-top{ display: inline-block; cursor: pointer; height: 97px; width: 100%; 
+		padding-top: 25px; touch-action: manipulation; }
+	#section2 #icon-arrow-top img{ height: 45px; width: 45px; }
+	#imagen img { width: 100%; }
+	#slide1 { padding:0; }
+	/* FIN SECTION-2 */
+
+	/*QUIENES SOMOS*/
+	#left-quienes{padding: 9% 0 2% 0;}
+	#right-quienes{ height: 94%; padding: 6%;}
+	#abajo-quienes { padding: 12% 6% 6% 6%; }
+	#abajo-quienes h1{ font-size: 20px; line-height: 29px; }
+	#abajo-quienes h2{ font-size: 15px; }
+	/*FIN QUIENES SOMOS*/
+
+	/*DETALLE SERVICIO*/
+	#wrapper-service #migajas{ display: none; }
+	#wrapper-service #top-service{ height: 265px; }
+	#wrapper-service #top-service img { width: 100%; height: 265px; }
+	#wrapper-service #title-service h1{ float: none; font-size: 35px; font-weight: 400;}
+	#wrapper-service #title-service{ margin-top: -82px; height: 17%;  width: 100%; margin-left: 0;    margin-bottom: 0; }
+	/*FIN DETALLE SERVICIO*/
+
+	/*DETALLE POST*/
+	#wrapper-detail-post #encabezado-articulo{ padding: 40% 6% 6% 6%; }
+	#wrapper-detail-post #encabezado-articulo h1{ font-size: 25px; }
+	#wrapper-detail-post #data{ margin-top: 26px; }
+	#wrapper-detail-post #data h3{ font-size: 14px; }
+	#wrapper-detail-post #data h2{ font-size: 14px;}
+
+	#wrapper-detail-post #encabezado-articulo #title-icon{width: 100%;}
+	#left-service{ left: 90px; top:60px; height: 40px; width: 80px; position: absolute; cursor: pointer; z-index: 4;}
+	#right-service{ right: 90px; top:60px; height: 40px; width: 80px; position: absolute; cursor: pointer; z-index: 4;} 
+	#wrapper-detail-post #data h2{margin-left: 4px;}
+	/*FIN DETALLE POST*/
+
+	/*POST*/
+	#post{ padding: 5% 7% 4% 7%; }
+	#post #post-left img{ width: 63%; float: none}
+	#post #title h1{  margin-top: 5px; text-align: center; font-size: 24px;}
+	#post #description p{ font-size: 16px; padding: 6px 0 0 0; text-align: center;}
+	#post #data{ float: none; margin-top: 15px; margin-bottom: 4px;}
+	#post #data h3{ display: none;    }
+	#post #data h2{ font-size: 13px; padding: 1px 6px 1px 6px; margin-left: 5px;}
+	#post:nth-child(1) #post-left img{ width: 63%; float: none }
+	#post:nth-child(1) #data h3{ display: none; }
+	#post:nth-child(1) #description p{ font-size: 16px; padding: 6px 0 0 0; text-align: center; }
+	#post:nth-child(1) #data{ margin-top: 15px; width: 100%; display: block; margin-bottom: 4px;}
+	/*FIN POST*/
+
+	/*CONTACTO*/
+	#left-form{ width: 100%; float: none;}
+	#right-form{ width: 100%; float: none; }
+	#wrapper-contacto{ padding-top: 25px; }
+	#wrapper-contacto #alto{ padding: 11%; }
+	#wrapper-contacto #alto input{ margin-bottom: 24px; padding: 15px 11px 11px 11px;  }
+	#wrapper-contacto #alto textarea{ min-height: 180px; margin-bottom: 25px; }
+	#wrapper-contacto #bajo{display: none;}
+	/*FIN CONTACTO*/
+}
+@media screen and (max-width: 355px){
+	/*DETALLE POST*/
+	#wrapper-detail-post #encabezado-articulo{ padding: 50% 6% 6% 6%; }
+	#left-service{ left: 40px; top:70px; height: 40px; width: 80px; position: absolute; cursor: pointer; z-index: 4;}
+	#right-service{ right: 40px; top:70px; height: 40px; width: 80px; position: absolute; cursor: pointer; z-index: 4;} 
+}
