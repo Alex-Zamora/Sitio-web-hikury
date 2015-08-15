@@ -1,12 +1,16 @@
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
 from django.conf import settings
+from blog.sitemaps import PostSitemap
+from projects.sitemaps import ProjectSitemap
+from services.sitemaps import ServiceSitemap
+
+sitemaps = {
+    'blog': PostSitemap(), 'proyectos': ProjectSitemap(), 'servicios':ServiceSitemap()
+}
 
 
 urlpatterns = patterns('',
-    # Examples:
-    # url(r'^$', 'hikury.views.home', name='home'),
-    # url(r'^blog/', include('blog.urls')),
 
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', 'home.views.home_view', name='home'),
@@ -15,7 +19,10 @@ urlpatterns = patterns('',
     url(r'^proyectos/', 'projects.views.project_view', name='project_view'),
     url(r'^blog/(?P<slug>[\w\-]+)/', 'blog.views.blog_view_detail', name='blog_detail'),
     url(r'^blog/', 'blog.views.blog_view', name='blog_view'),
+    url(r'^contacto/', 'contact.views.contact_view', name='contacto'),
+    (r'^summernote/', include('django_summernote.urls')),
     url(r'^media/(?P<path>.*)$','django.views.static.serve', {'document_root': settings.MEDIA_ROOT}),
-
+    url(r'^sitemap.xml$', 'django.contrib.sitemaps.views.sitemap', {'sitemaps': sitemaps}),
+    url(r'^robots.txt$', include('robots.urls')),
 
 )

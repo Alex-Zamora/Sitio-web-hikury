@@ -12,6 +12,6 @@ def service_detail_view(request, slug):
 
 def service_view_all(request):
 
-	services = Service.objects.all('-id')
+	services = Service.objects.all().order_by('-id')[:4]
 
 	return render(request, 'services.html', {'services':services})

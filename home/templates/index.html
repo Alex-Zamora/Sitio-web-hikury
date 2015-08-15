@@ -5,37 +5,37 @@
 {% block title %}  {% endblock %}
 
 {% block content %}
-<div id="fullpage" class="animatedParent" data-sequence="600">	
+<div id="fullpage">	
 	<div class="section" id="section0" >
 		<div id="frase">
-			<h3 class="animated fadeInDown" data-id="1">{{home.title_index}} <span></span></h3>
-			<ul class="animated fadeInDown" data-id="2">
+			<h3>{{home.title_index}} <span></span></h3>
+			<ul>
 				<li><h2>Creatividad &nbsp</h2></li>
 				<li><h2> Innovación &nbsp</h2></li>
 				<li><h2> Diseño</h2></li>
 			</ul>
 		</div>
-		<div id="icon-arrow" class="animated fadeInUp" data-id="3">
-			<img class="moveSectionDown" src="{% static 'image/icon-arrow1.png' %}" alt="">
+		<div id="icon-arrow">
+			<img class="moveSectionDown" src="{% static 'image/icon-arrow1.png' %}" alt="ver màs">
 		</div>		
 	</div><!-- /section0 -->
 	
 	<div class="section" id="section1">
 
 		<div id="icon-arrow-top" class="moveSectionUp">
-			<img src="image/icon-arrow2.png" alt="">
+			<img src="{% static 'image/icon-arrow2.png' %}" alt="Arriba">
 		</div>
 
 		{% show_services %}
 
 		<div id="icon-arrow-bottom" class="moveSectionDown">
-			<img src="image/icon-arrow1.png" alt="">
+			<img src="{% static 'image/icon-arrow1.png' %}" alt="Abajo">
 		</div>
 	</div> <!-- /section1 -->
 
 	<div class="section" id="section2">
 		<div id="icon-arrow-top" class="moveSectionUp">
-			<img src="image/icon-arrow2.png" alt="">
+			<img src="{% static 'image/icon-arrow2.png' %}" alt="Arriba">
 		</div>
 	    
 		{% show_projects %}
@@ -45,8 +45,7 @@
 <!-- js -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <script type="text/javascript" src="{% static 'js/jquery.fullPage.min.js' %}"></script>
-<script type="text/javascript" src="{% static 'js/css3-animate-it.js' %}"></script>
-<script type="text/javascript">
+<script type="text/javascript"> 
 $(document).ready(function (){
     $('.slideout-menu-toggle').on('click', function(event){
     	event.preventDefault();
@@ -81,8 +80,7 @@ $(document).ready(function (){
 				navigation: true,
 				navigationPosition: 'right',
 				anchors: ['inicio', 'servicios', 'proyectos'],
-				navigationTooltips: ['Inicio', 'Servicios', 'Proyecto'],
-				scrollBar: false,
+				navigationTooltips: ['Inicio', 'Servicios', 'Proyectos'],
 				loopHorizontal: true,
 				continuousVertical: false,
 

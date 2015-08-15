@@ -1,21 +1,21 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block title %}{{service.title}}{% endblock %}
+{% block title %}| {{service.title}}{% endblock %}
 
 {% block content %}
 <section id="wrapper">
 	<article id="wrapper-detail-post">
 			<div id="img-back">
-				<img src="{{MEDIA_URL}}{{service.image}}" alt="">					
+				<img src="{{MEDIA_URL}}{{service.image}}" alt="{{service.title}}">					
 			</div>
 			<div id="encabezado-articulo">
 				<div id="arrows-serive">
 					<div id="left-service">
-						<a href="#"><img src="{% static 'image/arrow-left1.png' %}" alt=""></a>
+						<a href="#"><img src="{% static 'image/arrow-left1.png' %}" alt="atrás"></a>
 						<h3>Atrás</h3>
 					</div>
 					<div id="right-service">
-						<a href="#"><img src="{% static 'image/arrow-right1.png' %}" alt=""></a>
+						<a href="#"><img src="{% static 'image/arrow-right1.png' %}" alt="siguinte"></a>
 						<h3>Siguiente</h3>
 					</div>
 				</div>
@@ -27,9 +27,7 @@
 				</div>
 			</div>
 			<div id="content-post">
-
-				<p>{{service.description}}.</p><br>
-
+				{{service.description | safe}}
 			</div>			
 	</article>
 </section>

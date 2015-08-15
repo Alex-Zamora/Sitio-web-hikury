@@ -41,6 +41,10 @@ INSTALLED_APPS = (
     'blog',
     'contact',
     'home',
+    'django_summernote',
+    'django.contrib.sitemaps',
+    'django.contrib.sites',
+    'robots',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -71,7 +75,7 @@ DATABASES = {
 # Internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'es-es'
 
 TIME_ZONE = 'UTC'
 
@@ -99,3 +103,19 @@ MEDIA_URL = '/media/'
 TEMPLATE_CONTEXT_PROCESSORS = TCP + (
     'hikury.context_processors.home_menu',
     )
+#Robots.txt
+SITE_ID = 1
+
+#configuracion envio de correo
+#EMAIL_HOST = 'smtp.gmail.com'
+#EMAIL_PORT = 587
+#EMAIL_HOST_USER = 'wixarikalex@gmail.com'
+#EMAIL_HOST_PASSWORD = 'alex777zamora22-'
+#EMAIL_USE_TLS = True
+
+
+
+
+
+
+

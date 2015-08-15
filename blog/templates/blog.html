@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% block title %}Blog{% endblock %}
+{% block title %}| Blog{% endblock %}
 
 {% block content %}
 <section id="wrapper">
@@ -16,7 +16,7 @@
 					<h1>{{p.title}}</h1>		
 				</div>
 				<div id="description">
-					<p>{{p.content|truncatechars:120|safe}}</p>
+					{{p.content|truncatechars:120|safe}}
 				</div>
 				<div id="data">
 					<h3>{{p.date}} /</h3>
@@ -27,7 +27,19 @@
 			</div><!-- fin post-right -->
 		</article><!--  fin post -->
 		</a>
-		{% endfor %}		
+		{% endfor %}
+		<div id="ver-post-pag">					
+			{% if posts.has_previous %}
+			    <a href="?page={{ posts.previous_page_number }}"><h5>Atrás</h5></a>
+			{% endif %}
+
+			<h6>Página</h6> <h6>{{ posts.number }}</h6> <h6>de</h6> <h6>{{ posts.paginator.num_pages }}</h6>	        
+
+			{% if posts.has_next %}
+			    <a href="?page={{ posts.next_page_number }}"><h5>Siguiente</h5></a>
+			{% endif %}    					
+		</div>
 	</div><!-- fin wrapper blog -->
+		
 </section><!-- fin wrapper -->
 {% endblock %}

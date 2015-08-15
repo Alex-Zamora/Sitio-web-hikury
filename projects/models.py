@@ -7,6 +7,9 @@ class Technology(models.Model):
 	def __str__(self):
 		return self.name
 
+	class Meta:		
+		verbose_name_plural = 'Tecnologías'
+
 class Project(models.Model):
 	title = models.CharField(max_length=255)
 	description = models.TextField()
@@ -20,3 +23,9 @@ class Project(models.Model):
 
 	def __str__(self):
 		return self.title
+
+	class Meta:		
+		verbose_name_plural = 'Proyectos'
+
+	def get_absolute_url(self):
+		return '/proyectos/%s/' % self.slug

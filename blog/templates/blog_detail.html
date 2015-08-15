@@ -1,27 +1,27 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block title %}Blog{% endblock %}
+{% block title %}| {{post.title}}{% endblock %}
 
 
 {% block content %}
 <section id="wrapper">
-	<article id="wrapper-detail-post" class="animatedParent" data-sequence="500">
+	<article id="wrapper-detail-post">
 			<div id="img-back">
 				<img src="{{MEDIA_URL}}{{post.imagePost}}" alt="{{post.title}}">
 			</div>
 			<div id="encabezado-articulo">
 				<div id="arrows-serive">
 					<div id="left-service">
-						<a href="#"><img src="{% static 'image/arrow-left1.png' %}" alt=""></a>
+						<a href="#"><img src="{% static 'image/arrow-left1.png' %}" alt="atrás"></a>
 						<h3>Atrás</h3>
 					</div>
 					<div id="right-service">
-						<a href="#"><img src="{% static 'image/arrow-right1.png' %}" alt=""></a>
+						<a href="#"><img src="{% static 'image/arrow-right1.png' %}" alt="siguiente"></a>
 						<h3>Siguiente</h3>
 					</div>
 				</div>
 				<div id="title-icon" >
-					<h1 class='animated fadeInDownShort' data-id="2">{{post.title}}</h1>
+					<h1>{{post.title}}</h1>
 					<div id="data">
 						<h3>{{post.date}} /</h3>
 						{% for c in post.category.all %}
@@ -30,8 +30,15 @@
 					</div>
 				</div>
 			</div>
-			<div id="content-post" class='animated fadeInDownShort' data-id="3">
-				<p>{{post.content}}</p>
+			<div id="content-post">
+				<div id="social-buttons">
+					<iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.hikury.com/{{post.slug}}/&amp;layout=button_count&amp;show_faces=true&amp;width=450&amp;action=like&amp;font=trebuchet+ms&amp;colorscheme=light&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100px; height:21px;" allowTransparency="true"></iframe>
+					<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.hikury.com/{{post.slug}}/" data-via="ZumaDigital">Tweet</a>
+					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+					<!-- Inserta esta etiqueta donde quieras que aparezca Botón +1. -->
+					<div class="g-plusone" data-size="medium"></div>
+				</div>
+				{{post.content|safe}}
 			</div>			
 	</article>
 </section>

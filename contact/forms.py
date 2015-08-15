@@ -1,7 +1,7 @@
-import django import forms
+from django import forms
 
 class ContactForm(forms.Form):
-	name = forms.CharField(max_length=150)
-	telephone = forms.CharField(max_length=100)
-	email = forms.EmailField(max_length=100)
-	mensaje = forms.TextField()
+	name = forms.CharField(max_length=100, required=True)
+	telephone = forms.CharField(max_length=100, required=True)
+	email = forms.EmailField(max_length=100, required=True)
+	mensaje = forms.CharField(widget=forms.Textarea, required=True)

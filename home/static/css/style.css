@@ -103,11 +103,10 @@ html,body{ width: 100%; height: 100%; }
 }
 #servicio:hover{ background-color: rgba(254,254,254,0.2); z-index: 5; }
 #servicio:hover #description h1{ color:#123f75; }
-#servicio:hover	#description p{ color:#123f75; font-weight: 400; font-family: "Lato";  }
-#servicio:nth-child(3n-5){ /*background-color: #fff;*/ }
+#servicio:hover	#description p{ color:#123f75; font-weight: 400; font-size: 18px; font-family: "Lato";  }
 #servicio:nth-child(3n-5):hover{ background-color: rgba(254,254,254,0.2); }
 
-#servicio #content-servicio{ padding: 9%; margin-top: 50px; }
+#servicio #content-servicio{ padding: 8%; margin-top: 50px; }
 #servicio #imagen{ float: left; margin-top: 10px; margin-left: 10px; }
 #servicio #imagen img{ width: 93px; }
 #servicio #description{ float: right; width: 70%; }
@@ -126,26 +125,21 @@ html,body{ width: 100%; height: 100%; }
 	font-size: 18px;
 	text-align: left;
 }
-#servicio i{
-	height: 2px;
-	width: 80%;
-	background-color: #000; 
-	border-bottom: 1px solid; 
-	z-index: 5;
-	position: relative;
+#servicio:hover .button-services{
+	background-color: rgba(18,63,117,0.99);
 }
-#servicio #description a{
-	padding-top: 15px;
-	color:#123f75;
+.button-services{
+	margin-top: 15px; 
+	color:#fff;
 	font-weight: 300;
 	font-family: "Lato";
-	font-size: 16px;
+	font-size: 15px;
 	text-align: left;
 	float: left;
 	border-radius: 25px;
-	background-color: #123f75;
-	height: 20px;
-}
+	background-color: rgba(18,63,117,0.7);
+	height: 24px;
+	padding: 2px 8px 5px 8px; }
 /*======  FIN SERVICIOS INDEX ======*/
 
 /*====== PROYECTOS INDEX ======*/
@@ -261,9 +255,9 @@ html,body{ width: 100%; height: 100%; }
 #wrapper-detail-post #img-back{ position: absolute; background-size: cover; }
 #wrapper-detail-post #img-back img{ width: 100%; height:420px; position: relative; z-index: 1;
 	background-size: cover; }
-#wrapper-detail-post #encabezado-articulo #title-icon{ width: 50%; text-align: center; display: inline-block;  }
+#wrapper-detail-post #encabezado-articulo #title-icon{ width: 77%; text-align: center; display: inline-block;  }
 #wrapper-detail-post #encabezado-articulo h1{
-	font-family:"Lato"; font-weight: 300; 	font-size: 50px; 
+	font-family:"Lato"; font-weight: 300; 	font-size: 38px; 
 	color:#fff;
 	text-align: center;	
 	position: relative;
@@ -276,11 +270,16 @@ html,body{ width: 100%; height: 100%; }
 	background: rgba(18,63,117,0.8);
 	z-index:2;
 	position: relative; }
-#wrapper-detail-post #content-post{ display: inline-block; position: relative; width: 84%; margin-top: 25px; margin-bottom: 20px;}
+#wrapper-detail-post #content-post{ display: inline-block; position: relative; width: 84%; margin-top: 30px; margin-bottom: 20px;}
 #wrapper-detail-post #content-post h2{ font-family: "Open Sans"; font-weight: 300; font-size: 18px; color: #4b4c4c; text-align: left;
 	font-weight: 400; padding-bottom: 20px;}
 #wrapper-detail-post #content-post p{font-family: "Open Sans"; font-weight: 300; font-size: 18px; 
-	color: #4b4c4c; text-align: left; padding-bottom: 10px;}
+	color: #4b4c4c; text-align: left; padding-bottom: 25px; line-height: 25px;}
+#wrapper-detail-post #content-post h3{ text-align: left; font-family: "Open Sans"; font-weight: 300; margin-bottom: 15px;}
+#wrapper-detail-post #content-post ul{ padding-left: 25px; }
+#wrapper-detail-post #content-post ul li{ list-style-type: circle; text-align: left; font-family: "Open Sans"; font-weight: 300; font-size: 18px; 
+	color: #4b4c4c; padding-bottom: 4px;}
+#wrapper-detail-post #content-post img{ }
 #wrapper-detail-post #data{ position: relative; margin-top: 30px;  }
 #wrapper-detail-post #data h3{ color:#fff; font-family:"Lato"; font-weight: 300; font-size: 17px; display: inline;}
 #wrapper-detail-post #data h2{ font-family:"Open Sans"; font-weight: 300; font-size: 17px;
@@ -289,6 +288,8 @@ html,body{ width: 100%; height: 100%; }
 #wrapper-detail-post #migajas{ z-index: 4; margin-top: 15px;  /*top: 367px; margin-left: 121px;*/ }
 #wrapper-detail-post #migajas h3{ color:#fff; font-family: "Lato"; font-weight: 300; font-size: 16px; }
 #wrapper-detail-post #migajas a{ color:#fff; }
+
+#social-buttons{ width: 100%; display: inline; float: left; margin-bottom: 15px; text-align: left; }
 
 /*====== Fin DETAIL POST =======*/
 
@@ -311,19 +312,22 @@ html,body{ width: 100%; height: 100%; }
 #post #post-left img{ float: left; width: 32%; padding-right: 2%; }
 
 #post #description{ margin-left: 10px; }
-#post #title h1{ font-family:"Lato"; font-weight: 300; 	font-size: 35px; color:#123f75; text-align: left; }
+#post #title h1{ font-family:"Lato"; font-weight: 300; 	font-size: 28px; color:#123f75; text-align: left; }
 #post #description p{ color:#4b4c4c; font-size: 18px; font-weight: 300; font-family:"Lato"; text-align: left; padding-top: 15px;}
 #post #data{ float: left; margin-top: 20px; }
 #post #data h3{ color:#4b4c4c; font-family:"Lato"; font-weight: 300; font-size: 16px; float: left;}
 #post #data h2{ color:#4b4c4c; font-family:"Open Sans"; font-weight: 300; font-size: 17px; margin-left: 16px; padding: 2px 8px 2px 8px; 
 	border:1px solid; border-radius: 25px; display: inline;}
 
-#post:nth-child(1) { border-bottom: 1px solid #d5dee9; }
+/*#post:nth-child(1) { border-bottom: 1px solid #d5dee9; }
 #post:nth-child(1) #post-left img{width: 50%; float: none;}
 #post:nth-child(1) #title h1{ text-align: center; margin-top:10px; }
 #post:nth-child(1) #description p{ text-align: center; padding: 10px 0 10px 0;}
 #post:nth-child(1) #data{ float: none; width: 50%; display: inline;}
-#post:nth-child(1) #data h3{ float: none; display: inline; }
+#post:nth-child(1) #data h3{ float: none; display: inline; }*/
+#ver-post-pag{ text-align: center; position: relative; margin-top: 20px; margin-bottom: 20px;}
+#ver-post-pag h5{ color:#000;  display: inline; font-family:"Open Sans"; font-weight: 300; font-size: 17px;}
+#ver-post-pag h6{ color: #123f75; display: inline; font-family:"Open Sans"; font-weight: 300; font-size: 17px;}
 /*====== FIN BLOG ======*/
 
 /*====== QUIENES SOMOS ======*/
@@ -384,6 +388,7 @@ html,body{ width: 100%; height: 100%; }
 	text-align: center;	
 }
 #wrapper-contacto #alto{ height: 59.4%; width: 100%; position: relative; padding: 5%; }
+#wrapper-contacto #alto h2{ padding-top: 20%; text-align: center; font-family: 'Lato', sans-serif; font-size: 28px; font-weight: 300; }
 #wrapper-contacto #bajo{ height: 40%; width: 100%; position: relative; display: inline-block;}
 
 #wrapper-contacto #alto input{ font-family: 'Lato', sans-serif; font-size: 18px; font-weight: 300; background-color:#ecedee;  

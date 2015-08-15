@@ -9,3 +9,9 @@ class Service(models.Model):
 
 	def __str__(self):
 		return self.title
+
+	class Meta:		
+		verbose_name_plural = 'Servicios'
+
+	def get_absolute_url(self):
+		return '/servicios/%s/' % self.slug

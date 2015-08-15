@@ -10,3 +10,6 @@ class Home(models.Model):
 
 	def __str__(self):
 		return self.title_index
+
+	class Meta:		
+		verbose_name_plural = 'Home'
