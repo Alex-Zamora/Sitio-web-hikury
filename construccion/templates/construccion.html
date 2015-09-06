@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}En Construcción{% endblock %}
+
+
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+
+<section id="wrapper">
+	<div id="wrapper-construccion">
+		<h1>Proyectos en desarrollo</h1>
+		{% if user.is_authenticated %}
+		<div id="cerrar-sesion">
+			<button class="btn btn-success"><a href="{%url 'cerrar-sesion'%}">Cerrar Sesión</a></button>
+		</div>
+		{% else %}
+			<a href="">Iniciar sesion</a>
+		{% endif %}
+		<!-- <div class="table-responsive">
+		<table class="table table-bordered table-hover">
+			<thead>
+				<tr class="active">
+					<th>Logo</th>
+					<th>Proyecto</th>
+					<th>Comentario</th>
+					<th>Link Demo</th>
+					<th data-sortable="true">Fecha de Entrega</th>
+					<th>Status</th>
+				</tr>
+			</thead>
+			<tbody>
+		{% for p in proyectos %}
+			<tr>
+				<td id="logo-tabla"><img src="{{MEDIA_URL}}{{p.imagen}}" alt="{{p.titulo}}"></td>
+			
+				<td>{{p.titulo}}</td>
+			
+				<td>{{p.descripcion}}</td>
+			
+				<td><a target="_blank" href="{{p.link}}">{{p.link}}</a></td>
+			
+				<td>{{p.fecha}}</td>
+
+				{% if p.status %}
+					<td><button class="btn btn-success btn-block"><i class="glyphicon .glyphicon-ok"></i>Desarrollo</button></td>
+				{% else %}
+				<td><button class="btn btn-danger btn-block">parado</button></td>
+				{% endif %}
+			</tr>
+		{% endfor %}
+			</tbody>
+		</table>
+		</div> -->
+		{% for p in proyectos %}
+		<article id="proyecto">
+			<img src="{{MEDIA_URL}}{{p.imagen}}" alt="{{p.titulo}}">
+			<h2>{{p.titulo}}</h2>
+			<p>{{p.descripcion}}</p>
+			<button class="btn btn-success"><a target="_blank" href="{{p.link}}">Visitar</a></button>
+		</article>
+		{% endfor %}
+	</div><!-- fin wrapper-construccion -->
+</section><!-- fin wrapper -->
+
+{% endblock %}

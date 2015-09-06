@@ -411,3 +411,29 @@ border: none; min-height: 215px; width: 100%;  padding: 15px; }
 #right-form{ width: 48.5%; float: right; }
 
 /*====== FIN CONTACTO ======*/
+
+/*====== CONSTRUCCION ======*/
+
+#construccion{  /*height: 350px; border:1px solid; 
+	 margin-left: 30px; margin-bottom: 30px;*/ }
+#logo-tabla img{ width: 40px; padding-top: 10px}
+#wrapper-construccion{text-align: center;}
+#wrapper-construccion #proyecto{ width: 30%; height: 400px; border: 1px solid #E5E8E8; 
+	float: left; margin-left: 25px; margin-bottom: 20px; background-color: #F9F9F9; }
+#wrapper-construccion #proyecto img{ width: 200px; display: inline-block; 
+	padding-top: 10px }
+#wrapper-construccion #proyecto p{ color:#000; text-align: center; padding: 10px; }
+#wrapper-construccion #proyecto h2{ padding-top: 5px; }
+#wrapper-construccion #proyecto button a{ color:#fff; }
+
+#cerrar-sesion{ margin-bottom: 20px; }
+#cerrar-sesion button{ background-color: #FCFCFD }
+#wrapper-login{ margin-top: 150px;  }
+.boxlogin{ margin: 0 auto; width: 320px; padding: 50px; border-radius: 4px; 
+	-webkit-border-radius:4px; -moz-border-radius:4px;}
+.boxlogin #submit{ margin-top: 20px; }
+.boxlogin label{ margin-top: 10px; }
+
+/*====== FIN CONSTRUCCION ======*/
+
+

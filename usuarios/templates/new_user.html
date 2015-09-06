@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %}En Construcción{% endblock %}
+
+
+{% block content %}
+<section id="wrapper">
+	<div id="wrapper-construccion">
+		<h2>Nuevo Usuario</h2>
+		
+		<form action="" method="post">
+			{% csrf_token %}
+			{{formulario.as_p}}
+			<input type="submit" value="Guardar"/>
+		</form>
+	</div><!-- fin wrapper-construccion -->
+</section><!-- fin wrapper -->
+{% endblock %}

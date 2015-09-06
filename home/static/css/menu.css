@@ -11,7 +11,7 @@
 	text-align: left;
 	z-index: 100;	 	
 }
-#head-menu{display: inline-block; width: 100%; height: 90px; margin-top:60px; margin-bottom: 10px;}
+#head-menu{display: inline-block; width: 100%; height: 75px; margin-top:42px; margin-bottom: 10px;}
 #logo-menu{ width: 100%;  text-align: center; display: inline-block;}
 #logo-menu img{ width: 62px; text-align: center; }
 .slideout-menu #icon-closet{ width: 100%; height: 40px;  cursor: pointer;  

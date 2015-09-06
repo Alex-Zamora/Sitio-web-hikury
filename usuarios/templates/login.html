@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Login{% endblock %}
+
+
+{% block content %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}">
+
+<section id="wrapper">
+	<div id="wrapper-login">
+		<div class="jumbotron boxlogin">
+		<h2>Iniciar Sesion</h2>
+		{% if user.is_authenticated %}
+			<a href="#">Salir</a>
+		{% else %}
+			<form action="" method="post" name="flogin" id="flogin">
+				{% csrf_token %}
+				<label>Nombre de Usuario</label>
+				<input id="id_username" class="form-control" name="username" type="text" placeholder="Nombre" required=""/>
+				<label>Contraseña:</label>
+				<input id="id_password" class="form-control" name="password" type="password"  placeholder="Contraseña" required=""/>
+				<input id="submit" class="btn btn-success" type="submit" name="submit" value="Iniciar">
+			</form>
+		{% endif %}
+		</div>
+	</div><!-- fin wrapper-construccion -->
+</section><!-- fin wrapper -->
+{% endblock %}
